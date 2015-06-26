@@ -1,0 +1,13 @@
+program Robot_p;
+
+uses
+  Forms,
+  Robot_u in 'Robot_u.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.
