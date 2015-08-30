@@ -1,8 +1,8 @@
 object frmKelner: TfrmKelner
-  Left = 326
-  Top = 416
-  Width = 297
-  Height = 149
+  Left = 192
+  Top = 107
+  Width = 696
+  Height = 480
   Caption = 'Kelner Geld Per uur'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,28 +13,36 @@ object frmKelner: TfrmKelner
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object lblUre: TLabel
-    Left = 8
+  object lblVergoeding_P_U: TLabel
+    Left = 32
     Top = 32
+    Width = 93
+    Height = 13
+    Caption = 'Vergoeding Per Uur'
+  end
+  object lblUre: TLabel
+    Left = 64
+    Top = 64
     Width = 55
     Height = 13
     Caption = 'Ure gewerk'
   end
-  object lblVergoeding_p_U: TLabel
-    Left = 8
-    Top = 8
-    Width = 137
+  object Label3: TLabel
+    Left = 64
+    Top = 120
+    Width = 32
     Height = 13
-    Caption = 'Vergoeding Per Uur  R 12.50'
+    Caption = 'Label3'
   end
-  object lblAfvoer: TLabel
-    Left = 8
-    Top = 56
-    Width = 3
+  object Label4: TLabel
+    Left = 56
+    Top = 176
+    Width = 32
     Height = 13
+    Caption = 'Label4'
   end
-  object sedUre: TSpinEdit
-    Left = 104
+  object sedVergoeding_P_U: TSpinEdit
+    Left = 136
     Top = 32
     Width = 41
     Height = 22
@@ -43,13 +51,14 @@ object frmKelner: TfrmKelner
     TabOrder = 0
     Value = 0
   end
-  object btnBereken: TButton
-    Left = 64
-    Top = 88
-    Width = 75
-    Height = 25
-    Caption = '&Bereken'
+  object sedUre: TSpinEdit
+    Left = 136
+    Top = 64
+    Width = 41
+    Height = 22
+    MaxValue = 0
+    MinValue = 0
     TabOrder = 1
-    OnClick = btnBerekenClick
+    Value = 0
   end
 end
