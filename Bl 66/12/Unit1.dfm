@@ -1,8 +1,8 @@
 object frmPunte: TfrmPunte
   Left = 192
   Top = 114
-  Width = 354
-  Height = 361
+  Width = 717
+  Height = 524
   Caption = 'Punte'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -49,6 +49,7 @@ object frmPunte: TfrmPunte
     Height = 25
     Caption = '&Vertoon'
     TabOrder = 2
+    OnClick = btnVertoonClick
   end
   object btnBereken: TButton
     Left = 128
@@ -57,6 +58,7 @@ object frmPunte: TfrmPunte
     Height = 25
     Caption = '&Bereken'
     TabOrder = 3
+    OnClick = btnBerekenClick
   end
   object bmbClose: TBitBtn
     Left = 232
@@ -67,10 +69,10 @@ object frmPunte: TfrmPunte
     Kind = bkClose
   end
   object redAfvoer: TRichEdit
-    Left = 48
-    Top = 200
-    Width = 185
-    Height = 89
+    Left = 8
+    Top = 168
+    Width = 353
+    Height = 297
     Lines.Strings = (
       ''
       ' ')
