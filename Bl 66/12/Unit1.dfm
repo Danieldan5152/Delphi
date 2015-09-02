@@ -11,6 +11,7 @@ object frmPunte: TfrmPunte
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object lblNaam: TLabel

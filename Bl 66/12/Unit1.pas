@@ -16,6 +16,7 @@ type
     btnBereken: TButton;
     bmbClose: TBitBtn;
     redAfvoer: TRichEdit;
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -28,5 +29,13 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmPunte.FormActivate(Sender: TObject);
+Const
+SkoolNaam = 'Die kollege'
+
+begin
+iTotaal
+end;
 
 end.
