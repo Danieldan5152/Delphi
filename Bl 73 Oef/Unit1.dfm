@@ -1,8 +1,8 @@
 object frmEinstein_Beurs: TfrmEinstein_Beurs
-  Left = 192
-  Top = 124
-  Width = 928
-  Height = 480
+  Left = 279
+  Top = 114
+  Width = 386
+  Height = 289
   Caption = 'Einstein-Beurs kwalifiseering'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,44 +13,42 @@ object frmEinstein_Beurs: TfrmEinstein_Beurs
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 184
-    Top = 16
-    Width = 32
+  object lblOpskrif: TLabel
+    Left = 96
+    Top = 8
+    Width = 148
     Height = 13
-    Caption = 'Label1'
+    Caption = 'Kwalifiseering vir Einstein-Beurs'
   end
-  object Label2: TLabel
+  object lblWiskPunt: TLabel
+    Left = 64
+    Top = 40
+    Width = 52
+    Height = 13
+    Caption = 'Wisk Punt:'
+  end
+  object lblWetenPunt: TLabel
     Left = 48
-    Top = 56
-    Width = 32
+    Top = 80
+    Width = 89
     Height = 13
-    Caption = 'Label2'
+    Caption = 'Wetenskaap Punt:'
   end
-  object Label3: TLabel
+  object lblGemid: TLabel
     Left = 48
-    Top = 96
-    Width = 32
+    Top = 160
+    Width = 3
     Height = 13
-    Caption = 'Label3'
   end
-  object Label4: TLabel
-    Left = 168
+  object lblBoodskap: TLabel
+    Left = 48
     Top = 184
-    Width = 32
+    Width = 3
     Height = 13
-    Caption = 'Label4'
   end
-  object Label5: TLabel
-    Left = 184
-    Top = 208
-    Width = 32
-    Height = 13
-    Caption = 'Label5'
-  end
-  object SpinEdit1: TSpinEdit
-    Left = 192
-    Top = 64
+  object sedWiskPunt: TSpinEdit
+    Left = 176
+    Top = 40
     Width = 121
     Height = 22
     MaxValue = 0
@@ -58,9 +56,9 @@ object frmEinstein_Beurs: TfrmEinstein_Beurs
     TabOrder = 0
     Value = 0
   end
-  object SpinEdit2: TSpinEdit
-    Left = 200
-    Top = 96
+  object sedWetenPunt: TSpinEdit
+    Left = 176
+    Top = 80
     Width = 121
     Height = 22
     MaxValue = 0
@@ -68,28 +66,31 @@ object frmEinstein_Beurs: TfrmEinstein_Beurs
     TabOrder = 1
     Value = 0
   end
-  object Button1: TButton
-    Left = 184
-    Top = 136
+  object btnBereken: TButton
+    Left = 160
+    Top = 128
     Width = 75
     Height = 25
-    Caption = 'Button1'
+    Caption = '&Bereken'
     TabOrder = 2
+    OnClick = btnBerekenClick
   end
-  object BitBtn1: TBitBtn
-    Left = 80
-    Top = 248
+  object bmbReset: TBitBtn
+    Left = 72
+    Top = 216
     Width = 75
     Height = 25
-    Caption = 'BitBtn1'
+    Caption = '&Reset'
     TabOrder = 3
+    OnClick = bmbResetClick
+    Kind = bkRetry
   end
-  object BitBtn2: TBitBtn
+  object bmbClose: TBitBtn
     Left = 232
-    Top = 248
+    Top = 216
     Width = 75
     Height = 25
-    Caption = 'BitBtn2'
     TabOrder = 4
+    Kind = bkClose
   end
 end

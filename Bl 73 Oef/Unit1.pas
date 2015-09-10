@@ -8,16 +8,18 @@ uses
 
 type
   TfrmEinstein_Beurs = class(TForm)
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    SpinEdit1: TSpinEdit;
-    SpinEdit2: TSpinEdit;
-    Button1: TButton;
-    Label4: TLabel;
-    Label5: TLabel;
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
+    lblOpskrif: TLabel;
+    lblWiskPunt: TLabel;
+    lblWetenPunt: TLabel;
+    sedWiskPunt: TSpinEdit;
+    sedWetenPunt: TSpinEdit;
+    btnBereken: TButton;
+    lblGemid: TLabel;
+    lblBoodskap: TLabel;
+    bmbReset: TBitBtn;
+    bmbClose: TBitBtn;
+    procedure btnBerekenClick(Sender: TObject);
+    procedure bmbResetClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,5 +32,31 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmEinstein_Beurs.btnBerekenClick(Sender: TObject);
+var
+iWisk, iWet, iGem : integer ;
+sGem, sAfvoer : string;
+begin
+iWisk := sedWiskPunt.value;
+iWet := sedWetenPunt.value;
+iGem := Round((iWisk + iWet)/2);
+sGem := 'Die leerder se gemiddeld is ' + IntToStr(iGem) + '%';
+lblGemid.Caption := sGem;
+sAfvoer := 'Kwalifiseer vir die Einstein-beurs';
+if iGem >= 90
+  then lblBoodskap.Caption := sAfvoer;
+end;
+
+procedure TfrmEinstein_Beurs.bmbResetClick(Sender: TObject);
+var
+sNiks : string;
+begin
+sNiks := ' ';
+sedWiskPunt.Clear;
+sedWetenPunt.Clear;
+lblGemid.Caption := sNiks;
+lblBoodskap.caption :=sNiks;
+end;
 
 end.
