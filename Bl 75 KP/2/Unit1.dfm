@@ -61,7 +61,7 @@ object frmGolfdag: TfrmGolfdag
     Top = 96
     Width = 75
     Height = 25
-    Caption = 'btnVertoon'
+    Caption = 'Vertoon'
     TabOrder = 3
     OnClick = btnVertoonClick
   end
