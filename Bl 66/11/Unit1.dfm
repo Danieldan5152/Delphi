@@ -42,9 +42,9 @@ object frmGeldeenhede_Omskakeling: TfrmGeldeenhede_Omskakeling
   object lblTotaleUitgawesRenV: TLabel
     Left = 64
     Top = 152
-    Width = 181
+    Width = 178
     Height = 13
-    Caption = ' Die reis en verblyfuitgawes (in Rand) :'
+    Caption = 'Die reis en verblyfuitgawes (in Rand) :'
   end
   object lblSakgeld: TLabel
     Left = 64

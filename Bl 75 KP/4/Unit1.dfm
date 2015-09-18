@@ -3,7 +3,7 @@ object frmPretDag: TfrmPretDag
   Top = 124
   Width = 326
   Height = 263
-  Caption = 'frmPretDag'
+  Caption = 'Pret Dag'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +11,7 @@ object frmPretDag: TfrmPretDag
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object lblNaam: TLabel
@@ -21,7 +22,7 @@ object frmPretDag: TfrmPretDag
     Caption = 'Naam'
   end
   object lblOuderdom: TLabel
-    Left = 48
+    Left = 40
     Top = 64
     Width = 49
     Height = 13
@@ -30,14 +31,16 @@ object frmPretDag: TfrmPretDag
   object lblKinders: TLabel
     Left = 72
     Top = 96
-    Width = 3
+    Width = 125
     Height = 13
+    Caption = 'Kinders by die pret dag al :'
   end
   object lblVolwasses: TLabel
     Left = 72
     Top = 120
-    Width = 3
+    Width = 140
     Height = 13
+    Caption = 'Volwasses by die pret dag al :'
   end
   object lblVerwelkom: TLabel
     Left = 88
@@ -78,5 +81,15 @@ object frmPretDag: TfrmPretDag
     Height = 25
     TabOrder = 3
     Kind = bkClose
+  end
+  object bmbReset: TBitBtn
+    Left = 120
+    Top = 184
+    Width = 75
+    Height = 25
+    Caption = '&Reset'
+    TabOrder = 4
+    OnClick = bmbResetClick
+    Kind = bkRetry
   end
 end

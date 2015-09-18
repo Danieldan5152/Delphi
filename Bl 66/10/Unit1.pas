@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Math;
+  Dialogs, StdCtrls, Math, Buttons;
 
 type
   TfrmDaagInkm = class(TForm)
@@ -27,6 +27,7 @@ type
     lblKlientTyd: TLabel;
     lblKosteVSes: TLabel;
     btnResetAles: TButton;
+    bmbClose: TBitBtn;
     procedure btnBerekenClick(Sender: TObject);
     procedure brnReset_WaardesClick(Sender: TObject);
     procedure btnResetAlesClick(Sender: TObject);
@@ -40,7 +41,7 @@ type
 var
   frmDaagInkm: TfrmDaagInkm;
   sHvlKlient, sInkmVDag, sGemidInkmPSes, sKlientTyd,
-  sNiks, sKosteVSes : string;
+  sKosteVSes : string;
   iKliente,  iInkVDag, iGemidInkPSes : integer;
 implementation
 
@@ -48,8 +49,8 @@ implementation
 
 procedure TfrmDaagInkm.btnBerekenClick(Sender: TObject);
 var
-iUurAan, iMinAan, iUurAf, iMinAf,iTyd_B, iTyd_K,
-iTotaleTyd, iKostePUur, iUurTyd, iMinTyd, iTyd,
+iUurAan, iMinAan, iUurAf, iMinAf,
+iKostePUur, iUurTyd, iMinTyd, iTyd,
 iKosteVSes, iGemidInkmPSes : integer;
 begin
 iKostePUur := 25;
@@ -57,15 +58,12 @@ iUurAan := StrToInt(edtUurAan.Text);
 iMinAan := StrToInt(edtMinAan.Text);
 iUurAf := StrToInt(edtUurAf.Text);
 iMinAf := StrToInt(edtMinAf.Text);
-iKliente := iKliente + 1;
+Inc(iKliente);
 iUurAan := iUurAan*60;
-//iTyd_B := iUurAan + iMinAan;
 iUurAf := iUurAf*60;
-//iTyd_K := iUurAf + iMinAf;
 iTyd := iUurAf - iUurAan + iMinAf - iMinAan;
 iUurTyd := iTyd div 60;
 iMinTyd := iTyd mod 60;
-//iTotaleTyd := iTyd_K - iTyd_B;
 iKosteVSes := ceil(iTyd/60);
 iKosteVSes := iKosteVSes * iKostePUur;
 iInkVDag := iInkVDag + iKosteVSes;
@@ -87,15 +85,20 @@ lblKlientTyd.caption := sKlientTyd ;
 
 sKosteVSes := 'Koste van sessie: R' + IntToStr(iKosteVSes);
 lblKosteVSes.Caption := sKosteVSes;
+
+edtUurAan.clear;
+edtMinAan.clear;
+edtUurAf.clear;
+edtMinAf.clear;
+edtUurAan.SetFocus ;
 end;
 
 procedure TfrmDaagInkm.brnReset_WaardesClick(Sender: TObject);
 begin
-sNiks := ' ';
-edtUurAan.text := sNiks;
-edtMinAan.text := sNiks;
-edtUurAf.text := sNiks;
-edtMinAf.text := sNiks;
+edtUurAan.clear;
+edtMinAan.clear;
+edtUurAf.clear;
+edtMinAf.clear;
 edtUurAan.SetFocus ;
 
 sKlientTyd := 'Hierdie klient was besig vir:';
@@ -108,11 +111,10 @@ end;
 
 procedure TfrmDaagInkm.btnResetAlesClick(Sender: TObject);
 begin
-sNiks := ' ';
-edtUurAan.text := sNiks;
-edtMinAan.text := sNiks;
-edtUurAf.text := sNiks;
-edtMinAf.text := sNiks;
+edtUurAan.clear;
+edtMinAan.clear;
+edtUurAf.clear;
+edtMinAf.clear;
 edtUurAan.SetFocus ;
 
 sHvlKlient := 'Hoveelheid kliente:';

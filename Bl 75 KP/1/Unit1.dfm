@@ -50,6 +50,7 @@ object frmAfslag_Berekening: TfrmAfslag_Berekening
     Top = 120
     Width = 249
     Height = 169
+    ReadOnly = True
     TabOrder = 2
   end
   object btnBereken: TButton

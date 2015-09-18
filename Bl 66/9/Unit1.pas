@@ -69,13 +69,12 @@ end;
 procedure TfrmMuurpapier.bmbResetClick(Sender: TObject);
 var
 sNiks : string;
-iNull : integer;
 begin
 sNiks := ' ';
-iNull := 0;
 lblAfvoer.Caption := sNiks;
-sedBreedte.Value := iNull;
-sedHoogte.Value := iNull;
+sedBreedte.clear;
+sedHoogte.Clear;
+sedBreedte.Setfocus;
 end;
 
 end.

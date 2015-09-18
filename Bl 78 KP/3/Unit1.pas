@@ -16,6 +16,8 @@ type
     btnVertoon: TButton;
     procedure btnVerwerkClick(Sender: TObject);
     procedure btnVertoonClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure bmbResetClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,7 +62,20 @@ if iGetal < iKlein then
 sAfvoer := 'Die Kleinste getal is :' + IntToStr(iKlein) +
   ' en die Grootste getal is :' + IntToStr(iGroot);
 lblAfvoer.Caption := sAfvoer;
+sedGetal.Clear;
 sedGetal.SetFocus;
+end;
+
+procedure TfrmGetalle.FormActivate(Sender: TObject);
+begin
+sedGetal.Clear;
+end;
+
+procedure TfrmGetalle.bmbResetClick(Sender: TObject);
+begin
+sedGetal.Clear;
+sedGetal.setfocus;
+lblAfvoer.Caption := ' ';
 end;
 
 end.

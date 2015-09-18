@@ -1,9 +1,9 @@
 object frmGetalle: TfrmGetalle
   Left = 192
   Top = 122
-  Width = 286
+  Width = 282
   Height = 197
-  Caption = 'frmGetalle'
+  Caption = 'Heel en Reele Getalle'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +11,7 @@ object frmGetalle: TfrmGetalle
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object lblGetal: TLabel
@@ -27,7 +28,7 @@ object frmGetalle: TfrmGetalle
     Height = 13
   end
   object btnVerwerk: TButton
-    Left = 88
+    Left = 96
     Top = 104
     Width = 75
     Height = 25
@@ -41,5 +42,23 @@ object frmGetalle: TfrmGetalle
     Width = 121
     Height = 21
     TabOrder = 1
+  end
+  object bmbReset: TBitBtn
+    Left = 8
+    Top = 104
+    Width = 75
+    Height = 25
+    Caption = '&Reset'
+    TabOrder = 2
+    OnClick = bmbResetClick
+    Kind = bkRetry
+  end
+  object bmbCkose: TBitBtn
+    Left = 184
+    Top = 104
+    Width = 75
+    Height = 25
+    TabOrder = 3
+    Kind = bkClose
   end
 end

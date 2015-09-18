@@ -17,7 +17,10 @@ type
     lblVerwelkom: TLabel;
     btnVertoon: TButton;
     bmbClose: TBitBtn;
+    bmbReset: TBitBtn;
     procedure btnVertoonClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure bmbResetClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,6 +56,22 @@ lblVerwelkom.Caption := sVerwelkom;
 edtNaam.Clear;
 sedOuderdom.Clear;
 edtNaam.SetFocus;
+end;
+
+procedure TfrmPretDag.FormActivate(Sender: TObject);
+begin
+edtNaam.SetFocus;
+sedOuderdom.Clear;
+end;
+
+procedure TfrmPretDag.bmbResetClick(Sender: TObject);
+begin
+edtNaam.clear;
+edtNaam.SetFocus;
+sedOuderdom.Clear;
+lblKinders.Caption := 'Kinders by die pret dag al :';
+lblVolwasses.Caption := 'Volwasses by die pret dag al :';
+
 end;
 
 end.

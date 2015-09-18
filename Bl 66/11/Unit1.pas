@@ -61,13 +61,11 @@ lblRandNodig.Caption := sRandNodig;
 end;
 
 procedure TfrmGeldeenhede_Omskakeling.bmbResetClick(Sender: TObject);
-var
-sNiks : string;
 begin
-sNiks := ' ';
-edtOmskakelingKoers.text := sNiks;
-edtSakgeldVreem.Text := sNiks;
-edtTotaleKosteVreem.Text := sNiks;
+edtOmskakelingKoers.clear;
+edtSakgeldVreem.clear;
+edtTotaleKosteVreem.clear;
+edtOmskakelingKoers.setfocus;
 
 sTotaleUitgawesRenV := 'Die reis en verblyfuitgawes (in Rand) :';
 lblTotaleUitgawesRenV.Caption := sTotaleUitgawesRenV;

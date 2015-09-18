@@ -133,7 +133,7 @@ object frmDaagInkm: TfrmDaagInkm
     Top = 232
     Width = 121
     Height = 25
-    Caption = 'Bereken hierdie Sessie'
+    Caption = '&Bereken hierdie Sessie'
     TabOrder = 2
     OnClick = btnBerekenClick
   end
@@ -142,7 +142,7 @@ object frmDaagInkm: TfrmDaagInkm
     Top = 232
     Width = 105
     Height = 25
-    Caption = 'Reset Alle Waardes'
+    Caption = '&Reset Alle Waardes'
     TabOrder = 3
     OnClick = brnReset_WaardesClick
   end
@@ -154,5 +154,13 @@ object frmDaagInkm: TfrmDaagInkm
     Caption = 'Reset Alles'
     TabOrder = 4
     OnClick = btnResetAlesClick
+  end
+  object bmbClose: TBitBtn
+    Left = 376
+    Top = 272
+    Width = 75
+    Height = 25
+    TabOrder = 5
+    Kind = bkClose
   end
 end

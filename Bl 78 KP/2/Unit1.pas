@@ -16,6 +16,7 @@ type
     bmbClose: TBitBtn;
     procedure btnVerwerkClick(Sender: TObject);
     procedure bmbResetClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,11 +47,19 @@ if iDeel = iGetal then
   sAfvoer := 'Die getal is n onewegetal.';
   lblAfvoer.Caption := sAfvoer;
   end;
+sedGetal.Clear;
+sedGetal.Focused;
 end;
 
 procedure TfrmEve_onEve.bmbResetClick(Sender: TObject);
 begin
 lblAfvoer.Caption := ' ';
+sedGetal.Clear;
+sedGetal.SetFocus;
+end;
+
+procedure TfrmEve_onEve.FormActivate(Sender: TObject);
+begin
 sedGetal.Clear;
 sedGetal.SetFocus;
 end;

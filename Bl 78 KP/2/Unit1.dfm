@@ -3,7 +3,7 @@ object frmEve_onEve: TfrmEve_onEve
   Top = 153
   Width = 346
   Height = 224
-  Caption = 'frmEve_onEve'
+  Caption = 'Eve en OnEve Getalle'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +11,7 @@ object frmEve_onEve: TfrmEve_onEve
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object lblGetal: TLabel

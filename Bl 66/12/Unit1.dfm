@@ -1,7 +1,7 @@
 object frmPunte: TfrmPunte
   Left = 192
   Top = 114
-  Width = 717
+  Width = 362
   Height = 524
   Caption = 'Punte'
   Color = clBtnFace
@@ -71,11 +71,12 @@ object frmPunte: TfrmPunte
   object redAfvoer: TRichEdit
     Left = 8
     Top = 168
-    Width = 353
+    Width = 329
     Height = 297
     Lines.Strings = (
       ''
       ' ')
+    ReadOnly = True
     TabOrder = 5
   end
 end

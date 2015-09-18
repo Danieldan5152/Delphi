@@ -17,6 +17,7 @@ type
     bmbClose: TBitBtn;
     procedure btnBerekenClick(Sender: TObject);
     procedure bmbResetClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,13 +57,25 @@ if ePunt < 50 then
 end;
 
 procedure TfrmGemid.bmbResetClick(Sender: TObject);
+var
+sNiks : string;
+iNull : integer;
 begin
-iSlaag := 0;
-iDruip := 0;
-eDruipT := 0;
-eSlaagT := 0;
-lblKDruip.Caption := ' ';
-lblKSlaag.Caption := ' ';
+sNiks := ' ';
+iNull := 0;
+iSlaag := iNull;
+iDruip := iNull;
+eDruipT := iNull;
+eSlaagT := iNull;
+lblKDruip.Caption := sNiks;
+lblKSlaag.Caption := sNiks;
+edtPunt.clear;
+edtPunt.setfocus;
+end;
+
+procedure TfrmGemid.FormActivate(Sender: TObject);
+begin
+edtPunt.setFocus;
 end;
 
 end.

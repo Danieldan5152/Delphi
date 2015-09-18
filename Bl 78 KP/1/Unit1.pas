@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Math;
+  Dialogs, StdCtrls, Math, Buttons;
 
 type
   TfrmGetalle = class(TForm)
@@ -12,7 +12,11 @@ type
     lblGetal: TLabel;
     lblAfvoer: TLabel;
     edtGetal: TEdit;
+    bmbReset: TBitBtn;
+    bmbCkose: TBitBtn;
     procedure btnVerwerkClick(Sender: TObject);
+    procedure bmbResetClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,6 +49,18 @@ if eGetal = iGetal then
 lblAfvoer.Caption := sAfvoer;
 edtGetal.Clear;
 edtGetal.SetFocus;
+end;
+
+procedure TfrmGetalle.bmbResetClick(Sender: TObject);
+begin
+edtGetal.clear;
+edtGetal.setFocus;
+lblAfvoer.Caption := ' ';
+end;
+
+procedure TfrmGetalle.FormActivate(Sender: TObject);
+begin
+edtGetal.setFocus;
 end;
 
 end.

@@ -2,7 +2,7 @@ object frmGemid: TfrmGemid
   Left = 192
   Top = 114
   Width = 323
-  Height = 271
+  Height = 220
   Caption = 'Die Druip, Slaag en Gemid syfer'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,6 +11,7 @@ object frmGemid: TfrmGemid
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object lblPunt: TLabel
@@ -29,12 +30,12 @@ object frmGemid: TfrmGemid
   object lblKDruip: TLabel
     Left = 64
     Top = 88
-    Width = 9
+    Width = 3
     Height = 13
   end
   object btnBereken: TButton
     Left = 112
-    Top = 160
+    Top = 112
     Width = 75
     Height = 25
     Caption = '&Bereken'
@@ -50,7 +51,7 @@ object frmGemid: TfrmGemid
   end
   object bmbReset: TBitBtn
     Left = 16
-    Top = 192
+    Top = 144
     Width = 75
     Height = 25
     Caption = '&Reset'
@@ -60,7 +61,7 @@ object frmGemid: TfrmGemid
   end
   object bmbClose: TBitBtn
     Left = 208
-    Top = 192
+    Top = 144
     Width = 75
     Height = 25
     TabOrder = 3

@@ -47,7 +47,7 @@ redAfvoer.Lines.Add (SkoolNaam);
 redAfvoer.Lines.Add(' ');
 redAfvoer.Paragraph.Alignment := taLeftJustify;
 redAfvoer.SelAttributes.Size := 10;
-redAfvoer.Lines.Add ('Naam' + #9 + #9 + 'Punt');
+redAfvoer.Lines.Add ('Naam' + #9 + #9 + #9 + 'Punt');
 redAfvoer.Lines.Add(' ');
 edtNaam.SetFocus;
 end;
@@ -60,11 +60,9 @@ begin
 sNaam := edtNaam.Text;
 iPunt := StrToInt(edtPunt.Text);
 iTotaal := iTotaal + iPunt;
-iTel := iTel + 1;
+inc(iTel);
 sNiks := ' ';
-
-
-
+redAfvoer.Lines.Add (sNaam + #9 + #9 + #9 + IntToStr(iPunt));
 edtNaam.Text := sNiks;
 edtPunt.Text := sNiks;
 edtNaam.setfocus;
@@ -72,12 +70,13 @@ end;
 
 procedure TfrmPunte.btnBerekenClick(Sender: TObject);
 var
-sTotaal, sGemiddeld : string;
 eGemiddeld : extended;
 begin
-sTotaal := 'Totaal' + IntToStr(iTotaal);
 eGemiddeld := iTotaal / iTel;
-sGemiddeld := 'Gemiddeld' + FloatToStrF(eGemiddeld, ffFixed, 5, 2);
+redAfvoer.Lines.Add('====================================================');
+redAfvoer.Lines.Add('Totaal' + #9 + #9 + #9 + IntToStr(iTotaal));
+redAfvoer.Lines.Add('Gemiddeld' + #9 +#9 + FloatToStrF
+(eGemiddeld, ffFixed, 5, 2));
 
 end;
 
