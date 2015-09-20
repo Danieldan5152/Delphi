@@ -1,9 +1,9 @@
 object frmFaktore: TfrmFaktore
   Left = 192
   Top = 114
-  Width = 696
-  Height = 480
-  Caption = 'frmFaktore'
+  Caption = 'Faktore'
+  ClientHeight = 187
+  ClientWidth = 308
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,23 +16,22 @@ object frmFaktore: TfrmFaktore
   object lblGetal1: TLabel
     Left = 32
     Top = 24
-    Width = 41
+    Width = 34
     Height = 13
-    Caption = 'lblGetal1'
+    Caption = 'Getal 1'
   end
   object lblGetal2: TLabel
     Left = 32
     Top = 56
-    Width = 41
+    Width = 34
     Height = 13
-    Caption = 'lblGetal2'
+    Caption = 'Getal 2'
   end
   object lblAfvoer: TLabel
     Left = 40
     Top = 96
-    Width = 41
+    Width = 3
     Height = 13
-    Caption = 'lblAfvoer'
   end
   object sedGetal1: TSpinEdit
     Left = 112
@@ -59,7 +58,7 @@ object frmFaktore: TfrmFaktore
     Top = 144
     Width = 75
     Height = 25
-    Caption = 'btnBewerk'
+    Caption = '&Bewerk'
     TabOrder = 2
     OnClick = btnBewerkClick
   end
