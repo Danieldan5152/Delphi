@@ -51,14 +51,13 @@ var
  iAantal, iBedrag :integer;
 
 begin
-   sLeerder := edtNaam.Text;
-   iAantal  := sedAantal.Value;
-   iBedrag  := iAantal * 5;
-   sAfvoer := sLeerder + ' jy moet R ' + IntToStr(iBedrag) + ' betaal.';
+   sLeerder := edtNaam.Text;// Die leerder se naam
+   iAantal  := sedAantal.Value;//Hoeveel leerderS betaal vir
+   iBedrag  := iAantal * 5;//berekening
+   sAfvoer := sLeerder + ' jy moet R ' + IntToStr(iBedrag) + ' betaal.';//afvoer
    lblAfvoer.Caption := sAfvoer;
 
 //iBedrag := strToint(lblAfvoer.text);
 end;
 
 end.
-

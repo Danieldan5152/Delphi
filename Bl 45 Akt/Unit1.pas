@@ -38,12 +38,12 @@ sLeerder, sAfvoer                        : string;
 iPunt1, iPunt2, iPunt3  : integer;
 rGemiddeld                      : real;
 begin
-sLeerder := edtNaam.text;
-iPunt1 := sedPunt1.value;
-iPunt2 := sedPunt2.value;
-iPunt3 := sedPunt3.value;
-rGemiddeld := (iPunt1 + iPunt2 + iPunt3)/3;
-sAfvoer := sLeerder + ' se gemiddeld is ' + FloatToStrF (rGemiddeld, ffFixed, 5, 1);
+sLeerder := edtNaam.text;// die Leerder se naam
+iPunt1 := sedPunt1.value;// sy eerste punt
+iPunt2 := sedPunt2.value;// sy tweede punt 
+iPunt3 := sedPunt3.value;// sy derde punt
+rGemiddeld := (iPunt1 + iPunt2 + iPunt3)/3;// sy 3 punte se gemiddeld
+sAfvoer := sLeerder + ' se gemiddeld is ' + FloatToStrF (rGemiddeld, ffFixed, 5, 1);// afvoer
 
 lblAfvoer.Caption := sAfvoer
 end;

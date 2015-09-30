@@ -43,11 +43,11 @@ iPrakties,iTeorie,iProjek,iTotaal : integer;
 
 begin
 sNaam := edtNaam.Text;
-iPrakties := sedPrakties.value;
-iTeorie :=  sedTeorie.value;
-iProjek :=  sedProjek.value;
-iTotaal := iPrakties + iTeorie + iProjek;
-sAfvoer := sNaam + ' jy het ' + IntToStr(iTotaal) + '% vir RS';
+iPrakties := sedPrakties.value;// sy praktiese punt
+iTeorie :=  sedTeorie.value;// sy teorie punt
+iProjek :=  sedProjek.value;// sy projek punt
+iTotaal := iPrakties + iTeorie + iProjek;// sy 3 punte saam
+sAfvoer := sNaam + ' jy het ' + IntToStr(iTotaal) + '% vir RS';// afvoer 
 lblAfvoer.Caption := sAfvoer ;
 end;
 
