@@ -4,20 +4,19 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Buttons;
+  Dialogs, Buttons, StdCtrls, Spin, ExtCtrls;
 
 type
   TForm1 = class(TForm)
-    lblVoorNaam: TLabel;
-    lblVan: TLabel;
-    rgpSwem: TRadioGroup;
-    radVryslag: TRadioButton;
-    radBorsslag: TRadioButton;
-    radRugslag: TRadioButton;
-    radVlinderslag: TRadioButton;
-    edtVoorNaam: TEdit;
-    edtVan: TEdit;
+    pnlMain: TPanel;
+    lblKostePSMS: TLabel;
+    lblAantalSMS: TLabel;
+    edtKostePSMS: TEdit;
+    sedAantalSMS: TSpinEdit;
+    cbxKontrak: TCheckBox;
     lblAfvoer: TLabel;
+    pnlButtons: TPanel;
+    btnBereken: TButton;
     bmbReset: TBitBtn;
     bmbClose: TBitBtn;
   private
@@ -34,4 +33,3 @@ implementation
 {$R *.dfm}
 
 end.
- 
