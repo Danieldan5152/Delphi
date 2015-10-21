@@ -35,20 +35,19 @@ implementation
 procedure TfrmGeldeenheid_Omskakelaar.btnRand_na_PondClick(
   Sender: TObject);
 //Rand Na Pond
-var
+var// variables 
 sAfvoer, sGeldwaarde, sRand, sPond : string;
 rGeld, rRand, rPond, rVer : real;
 begin
-rVer := 7.56;
-sGeldwaarde := edtGeldwaarde.text;
-rGeld := StrToFloat (sGeldwaarde);
-rRand := rGeld;
-sRand := FloatToStr (rRand);
-rPond := rRand/rVer;
-//sPond := FloatToStr (rPond,ffFixed,5,2);
-sPond := FloatToStr (rPond);
-sAfvoer := sRand + ' Rand is ' + sPond + ' Pond.';
-lblAfvoer.Caption := sAfvoer;
+rVer := 7.56;// 
+sGeldwaarde := edtGeldwaarde.text;// 
+rGeld := StrToFloat (sGeldwaarde);// 
+rRand := rGeld;// 
+sRand := FloatToStr (rRand);// 
+rPond := rRand/rVer;// 
+sPond := FloatToStrF (rPond,ffFixed,5,2);// 
+sAfvoer := sRand + ' Rand is ' + sPond + ' Pond.';// 
+lblAfvoer.Caption := sAfvoer;// 
 end;
 
 procedure TfrmGeldeenheid_Omskakelaar.btnPond_na_RandClick(
@@ -58,16 +57,15 @@ var
 sAfvoer, sGeldwaarde, sRand, sPond : string;
 rGeld, rRand, rPond, rVer : real;
 begin
-rVer := 7.56;
-sGeldwaarde := edtGeldwaarde.text;
-rGeld := StrToFloat (sGeldwaarde);
-rPond := rGeld;
-sPond := FloatToStr (rPond);
-rRand := rPond*rVer;
-//sRand := FloatToStr (rRand,ffFixed,5,2);
-sRand := FloatToStr (rRand);
-sAfvoer := sPond + ' Pond is ' + sRand + ' Rand.';
-lblAfvoer.Caption := sAfvoer;
+rVer := 7.56;// 
+sGeldwaarde := edtGeldwaarde.text;// 
+rGeld := StrToFloat (sGeldwaarde);// 
+rPond := rGeld;// 
+sPond := FloatToStr (rPond);// 
+rRand := rPond*rVer;// 
+sRand := FloatToStr (rRand,ffFixed,5,2);// 
+sAfvoer := sPond + ' Pond is ' + sRand + ' Rand.';// 
+lblAfvoer.Caption := sAfvoer;// 
 
 end;
 

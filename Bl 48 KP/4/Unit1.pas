@@ -31,16 +31,16 @@ implementation
 {$R *.dfm}
 
 procedure TfrmFahrenheit_na_Grade.btnBerekenClick(Sender: TObject);
-var
+var// variables 
 sAfvoer : string;
 rFahrenheit,rCelsius : real;
 begin
-rFahrenheit := StrToFloat(edtFahrenheit.Text);
-rCelsius := (rFahrenheit - 32) * 5/9;
+rFahrenheit := StrToFloat(edtFahrenheit.Text);// Hoeveel Fahrenheit in gesluitel is
+rCelsius := (rFahrenheit - 32) * 5/9;// Hoeveel grade celxius dit is
 //sAfvoer := FloatToStr (rFahrenheit) + ' grade Fahrenheit is ' + FloatToStr (rCelsius, ffFixed, 5, 1) + ' grade Celsius.';
 sAfvoer := FloatToStr (rFahrenheit) + ' grade Fahrenheit is ' +
-FloatToStr (rCelsius) + ' grade Celsius.';
-lblAfvoer.Caption := sAfvoer;
+FloatToStr (rCelsius) + ' grade Celsius.';// Die verwerking se afvoer
+lblAfvoer.Caption := sAfvoer;// Vertoon afvoer
 end;
 
 procedure TfrmFahrenheit_na_Grade.bmbResetClick(Sender: TObject);

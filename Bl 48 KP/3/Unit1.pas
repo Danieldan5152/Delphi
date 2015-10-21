@@ -32,22 +32,22 @@ implementation
 {$R *.dfm}
 
 procedure TForm1.btnBerekenClick(Sender: TObject);
-Var
+Var// variables 
 sLeerder_Persentasie    : string;
 iPunt, iToets_Totaal : integer;
 rPersentasie : real;
 
 Begin
-iPunt := sedPunt.value;
-iToets_Totaal := sedToets_Totaal.value;
-rPersentasie := (100/iToets_Totaal) * iPunt;
-sLeerder_Persentasie := 	'Die leerder het ' + FloatToStrF(rPersentasie,  ffFixed, 5, 2)  + '% vir die toets' ;
-lblAfvoer.Caption := sLeerder_Persentasie;
+iPunt := sedPunt.value;// Punt vir toets
+iToets_Totaal := sedToets_Totaal.value;// Hoeveel die toets tel
+rPersentasie := (100/iToets_Totaal) * iPunt;// Persentasie vir die toets
+sLeerder_Persentasie := 	'Die leerder het ' + FloatToStrF(rPersentasie,  ffFixed, 5, 2)  + '% vir die toets' ;// Toets afvoer
+lblAfvoer.Caption := sLeerder_Persentasie;// Vertoon afvoer
 
 end;
 
 procedure TForm1.bmbResetClick(Sender: TObject);
-var
+var// variables 
 sLeerder_Persentasie    : string;
 iPunt, iToets_Totaal : integer;
 begin

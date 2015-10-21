@@ -28,18 +28,18 @@ implementation
 {$R *.dfm}
 
 procedure TfrmKelner.btnBerekenClick(Sender: TObject);
-var
+var// variables
 sAfvoer : string;
 iUre_Gewerk : integer;
 rPer_Uur, rGeld_Verdien : real;
 begin
-rPer_Uur := 12.50;
-iUre_Gewerk := sedUre.Value;
+rPer_Uur := 12.50;// Geld per uur
+iUre_Gewerk := sedUre.Value;// Ure gewerk 
 //RGeld_Verdien := iUre_Gewerk * (12.50);
-rGeld_Verdien := iUre_Gewerk * rPer_Uur;
+rGeld_Verdien := iUre_Gewerk * rPer_Uur;// Totale geld verdien 
 sAfvoer := 'Die Kelener het ' + IntToStr(iUre_Gewerk) +
-' ure gewerk en verdien R' + FloatToStrF(rGeld_Verdien, ffFixed, 5, 2)+ '.' ;
-lblAfvoer.Caption := sAfvoer;
+' ure gewerk en verdien R' + FloatToStrF(rGeld_Verdien,  ffFixed, 5, 2)+ '.' ;// Geld afvoer
+lblAfvoer.Caption := sAfvoer;// Vertoon afvoer
 end;
 
 end.
