@@ -27,12 +27,12 @@ implementation
 {$R *.dfm}
 
 procedure TForm1.Button1Click(Sender: TObject);
-begin
+begin// maak die hios verskyn
 Image1.Visible:=true
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
-begin
+begin// maak die huis verdwyn
 Image1.Visible:=false
 end;
 

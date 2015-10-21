@@ -176,7 +176,7 @@ object Form1: TForm1
     Width = 273
     Height = 233
     Lines.Strings = (
-      'richedit1')
+      '')
     TabOrder = 3
   end
 end

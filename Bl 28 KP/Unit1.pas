@@ -64,7 +64,7 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-richedit1.Clear
+
 end;
 
 end.

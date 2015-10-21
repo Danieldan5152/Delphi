@@ -37,21 +37,21 @@ implementation
 {$R *.dfm}
 
 procedure TForm1.Button1Click(Sender: TObject);
-begin
+begin// rooi lug brand aleen
     shape1.Brush.color:=clred;
     shape2.Brush.Color:=clwhite;
     shape3.Brush.Color:=clwhite;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
-begin
+begin// geel lug brand aleen
     shape1.Brush.color:=clwhite;
     shape2.Brush.Color:=clYellow;
     shape3.Brush.Color:=clwhite;
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
-begin
+begin// groen lug brand aleen
     shape1.Brush.color:=clwhite;
     shape2.Brush.Color:=clwhite;
     shape3.Brush.Color:=clgreen;
@@ -59,7 +59,7 @@ end;
 
 procedure TForm1.Shape1MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
-begin
+begin// rooi lug brand aleen on hover
     shape1.Brush.color:=clred;
     shape2.Brush.Color:=clwhite;
     shape3.Brush.Color:=clwhite;
@@ -67,7 +67,7 @@ end;
 
 procedure TForm1.Shape2MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
-begin
+begin// geel lug brand aleen on hover
     shape1.Brush.color:=clwhite;
     shape2.Brush.Color:=clYellow;
     shape3.Brush.Color:=clwhite;
@@ -75,7 +75,7 @@ end;
 
 procedure TForm1.Shape3MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
-begin
+begin// groen lug brand aleen on hover
     shape1.Brush.color:=clwhite;
     shape2.Brush.Color:=clwhite;
     shape3.Brush.Color:=clgreen;
