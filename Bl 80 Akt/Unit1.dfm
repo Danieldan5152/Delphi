@@ -1,9 +1,9 @@
-object Form1: TForm1
-  Left = 192
-  Top = 124
-  Width = 928
-  Height = 480
-  Caption = 'Form1'
+object frmSwemGala: TfrmSwemGala
+  Left = 239
+  Top = 130
+  Width = 425
+  Height = 416
+  Caption = 'Registreer vir die Swemgala'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,85 +16,57 @@ object Form1: TForm1
   object lblVoorNaam: TLabel
     Left = 40
     Top = 48
-    Width = 60
+    Width = 53
     Height = 13
-    Caption = 'lblVoorNaam'
+    Caption = 'Voor Naam'
   end
   object lblVan: TLabel
     Left = 56
     Top = 80
-    Width = 29
+    Width = 19
     Height = 13
-    Caption = 'lblVan'
+    Caption = 'Van'
   end
   object lblAfvoer: TLabel
-    Left = 16
-    Top = 256
-    Width = 41
+    Left = 24
+    Top = 312
+    Width = 3
     Height = 13
-    Caption = 'lblAfvoer'
   end
   object rgpSwem: TRadioGroup
     Left = 128
     Top = 128
     Width = 185
     Height = 113
-    Caption = 'rgpSwem'
+    Caption = 'Swem'
+    Items.Strings = (
+      'Vryslag'
+      'Borslag'
+      'Rugslag'
+      'Vlinderslag')
     TabOrder = 0
-  end
-  object radVryslag: TRadioButton
-    Left = 144
-    Top = 152
-    Width = 113
-    Height = 17
-    Caption = 'radVryslag'
-    TabOrder = 1
-  end
-  object radBorsslag: TRadioButton
-    Left = 144
-    Top = 168
-    Width = 113
-    Height = 17
-    Caption = 'radBorsslag'
-    TabOrder = 2
-  end
-  object radRugslag: TRadioButton
-    Left = 144
-    Top = 184
-    Width = 113
-    Height = 17
-    Caption = 'radRugslag'
-    TabOrder = 3
-  end
-  object radVlinderslag: TRadioButton
-    Left = 144
-    Top = 200
-    Width = 113
-    Height = 17
-    Caption = 'radVlinderslag'
-    TabOrder = 4
+    OnClick = rgpSwemClick
   end
   object edtVoorNaam: TEdit
     Left = 136
     Top = 48
     Width = 121
     Height = 21
-    TabOrder = 5
+    TabOrder = 1
   end
   object edtVan: TEdit
     Left = 136
     Top = 80
     Width = 121
     Height = 21
-    TabOrder = 6
-    Text = 'edtVan'
+    TabOrder = 2
   end
   object bmbReset: TBitBtn
     Left = 136
     Top = 264
     Width = 75
     Height = 25
-    TabOrder = 7
+    TabOrder = 3
     Kind = bkRetry
   end
   object bmbClose: TBitBtn
@@ -102,7 +74,7 @@ object Form1: TForm1
     Top = 264
     Width = 75
     Height = 25
-    TabOrder = 8
+    TabOrder = 4
     Kind = bkClose
   end
 end
