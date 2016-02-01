@@ -7,7 +7,7 @@ uses
   Dialogs, StdCtrls, ComCtrls, ExtCtrls, Buttons;
 
 type
-  TForm1 = class(TForm)
+  TfrmInfo = class(TForm)
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
@@ -27,7 +27,6 @@ type
     richedit1: TRichEdit;
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,13 +34,13 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmInfo: TfrmInfo;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm1.BitBtn1Click(Sender: TObject);
+procedure TfrmInfo.BitBtn1Click(Sender: TObject);
 begin
 richedit1.lines.add (' ');
 richedit1.lines.add (label1.Caption + ' ' + edit1.Text);
@@ -52,7 +51,7 @@ richedit1.lines.add (label5.Caption + ' ' + edit5.Text);
 //richedit1.lines.add ();
 end;
 
-procedure TForm1.BitBtn2Click(Sender: TObject);
+procedure TfrmInfo.BitBtn2Click(Sender: TObject);
 begin
 edit1.Clear;
 edit2.Clear;
@@ -60,11 +59,6 @@ edit3.Clear;
 edit4.Clear;
 edit5.Clear;
 edit1.SetFocus;
-end;
-
-procedure TForm1.FormCreate(Sender: TObject);
-begin
-
 end;
 
 end.

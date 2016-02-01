@@ -1,9 +1,9 @@
-object Form1: TForm1
+object frmInfo: TfrmInfo
   Left = 192
   Top = 114
-  Width = 574
-  Height = 461
-  Caption = 'Form1'
+  Caption = 'Info'
+  ClientHeight = 422
+  ClientWidth = 558
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,7 +11,6 @@ object Form1: TForm1
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
-  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -111,9 +110,6 @@ object Form1: TForm1
       Height = 25
       Caption = '&Byvoeg'
       Default = True
-      ModalResult = 1
-      TabOrder = 0
-      OnClick = BitBtn1Click
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -131,7 +127,10 @@ object Form1: TForm1
         3338F38F000033333333333333A223333333333333338F830000333333333333
         333A333333333333333338330000333333333333333333333333333333333333
         0000}
+      ModalResult = 1
       NumGlyphs = 2
+      TabOrder = 0
+      OnClick = BitBtn1Click
     end
     object BitBtn2: TBitBtn
       Left = 8
@@ -139,9 +138,6 @@ object Form1: TForm1
       Width = 75
       Height = 25
       Caption = '&Reset'
-      ModalResult = 4
-      TabOrder = 1
-      OnClick = BitBtn2Click
       Glyph.Data = {
         DE010000424DDE01000000000000760000002800000024000000120000000100
         0400000000006801000000000000000000001000000000000000000000000000
@@ -159,15 +155,19 @@ object Form1: TForm1
         33FF88F800003333AA222222AA33A3333388FFFFFF8833830000333333AAAAAA
         3333333333338888883333330000333333333333333333333333333333333333
         0000}
+      ModalResult = 4
       NumGlyphs = 2
+      TabOrder = 1
+      OnClick = BitBtn2Click
     end
     object BitBtn3: TBitBtn
       Left = 8
       Top = 88
       Width = 75
       Height = 25
-      TabOrder = 2
       Kind = bkClose
+      NumGlyphs = 2
+      TabOrder = 2
     end
   end
   object richedit1: TRichEdit
@@ -175,8 +175,15 @@ object Form1: TForm1
     Top = 176
     Width = 273
     Height = 233
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
     Lines.Strings = (
       '')
+    ParentFont = False
     TabOrder = 3
+    Zoom = 100
   end
 end
